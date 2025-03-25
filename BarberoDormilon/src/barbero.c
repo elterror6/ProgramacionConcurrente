@@ -24,6 +24,8 @@ int main (int argc, char *argv[]) {
     sem_t *wup_barber, *wup_client;
     pid_t pid = getpid();
 
+    srand(pid);
+
     wup_barber = get_sem(WUP_BARBER);
     wup_client = get_sem(WUP_CLIENT);
 
@@ -51,5 +53,5 @@ int main (int argc, char *argv[]) {
 void cortar () {
     pid_t pid = getpid();
     printf("Barbero [%d] cortando el pelo.\n", pid);
-    sleep(rand() % 3);
+    sleep(rand() % 10);
 }

@@ -22,6 +22,8 @@ int main (int argc, char *argv[]) {
     
     pid_t pid = getpid();
 
+    srand(pid);
+
     mutex_wr=get_sem(MUTEX_WR); wup_barber=get_sem(WUP_BARBER); wup_client=get_sem(WUP_CLIENT); mutex_sit=get_sem(MUTEX_SIT);
     wr = obtener_var(WAITING_ROOM);
 
