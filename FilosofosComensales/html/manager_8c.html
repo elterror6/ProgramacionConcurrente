@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Filósofos Comensales: Referencia del Archivo src/manager.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Filósofos Comensales
+   </div>
+   <div id="projectbrief">Práctica de la asignatura de Programación Concurrente y Tiempo Real de la Universidad de Castilla-La Mancha.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo manager.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Programa que lanza los procesos de los filósofos y gestiona la creación y eliminación de los buzones.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;mqueue.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;wait.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="definitions_8h_source.html">definitions.h</a>&gt;</code><br />
+<code>#include &lt;signal.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Dependencia gráfica adjunta para manager.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="manager_8c__incl.png" border="0" usemap="#asrc_2manager_8c" alt=""/></div>
+<map name="asrc_2manager_8c" id="asrc_2manager_8c">
+<area shape="rect" title="Programa que lanza los procesos de los filósofos y gestiona la creación y eliminación de los buzones." alt="" coords="433,5,547,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,92,107"/>
+<area shape="rect" title=" " alt="" coords="117,80,183,107"/>
+<area shape="rect" title=" " alt="" coords="208,80,279,107"/>
+<area shape="rect" title=" " alt="" coords="303,80,373,107"/>
+<area shape="rect" title=" " alt="" coords="398,80,473,107"/>
+<area shape="rect" title=" " alt="" coords="497,80,593,107"/>
+<area shape="rect" title=" " alt="" coords="617,80,702,107"/>
+<area shape="rect" title=" " alt="" coords="727,80,789,107"/>
+<area shape="rect" href="definitions_8h.html" title="Definiciones y constantes utilizadas en el programa de los filósofos comensales." alt="" coords="813,80,916,107"/>
+<area shape="rect" title=" " alt="" coords="940,80,1013,107"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a0309e3ec9b4e1eb3d8883757657172bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manager_8c.html#a0309e3ec9b4e1eb3d8883757657172bd">controlador</a> (int signal)</td></tr>
+<tr class="memdesc:a0309e3ec9b4e1eb3d8883757657172bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función que maneja la señal de interrupción (Ctrl+C).  <a href="manager_8c.html#a0309e3ec9b4e1eb3d8883757657172bd">Más...</a><br /></td></tr>
+<tr class="separator:a0309e3ec9b4e1eb3d8883757657172bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a043418698686058ede18ed16fd7a20fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manager_8c.html#a043418698686058ede18ed16fd7a20fe">liberarRecursos</a> ()</td></tr>
+<tr class="memdesc:a043418698686058ede18ed16fd7a20fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función que libera los recursos utilizados por el programa.  <a href="manager_8c.html#a043418698686058ede18ed16fd7a20fe">Más...</a><br /></td></tr>
+<tr class="separator:a043418698686058ede18ed16fd7a20fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3a76f1f7e074df75622a7aafad75bcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manager_8c.html#ae3a76f1f7e074df75622a7aafad75bcf">finalizarProcesos</a> ()</td></tr>
+<tr class="memdesc:ae3a76f1f7e074df75622a7aafad75bcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función que finaliza los procesos de los filósofos.  <a href="manager_8c.html#ae3a76f1f7e074df75622a7aafad75bcf">Más...</a><br /></td></tr>
+<tr class="separator:ae3a76f1f7e074df75622a7aafad75bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4575587196d35e20f8cf5a375886afd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manager_8c.html#ae4575587196d35e20f8cf5a375886afd">lanzarProcesos</a> ()</td></tr>
+<tr class="memdesc:ae4575587196d35e20f8cf5a375886afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función que lanza los procesos de los filósofos.  <a href="manager_8c.html#ae4575587196d35e20f8cf5a375886afd">Más...</a><br /></td></tr>
+<tr class="separator:ae4575587196d35e20f8cf5a375886afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61e8c40b684c116cc47d163be51e9a68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manager_8c.html#a61e8c40b684c116cc47d163be51e9a68">crearBuzonMesa</a> (struct mq_attr *mqAttr, mqd_t *buzon_mesa, char *buffer)</td></tr>
+<tr class="memdesc:a61e8c40b684c116cc47d163be51e9a68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función que crea el buzón de la mesa y los buzones de los palillos.  <a href="manager_8c.html#a61e8c40b684c116cc47d163be51e9a68">Más...</a><br /></td></tr>
+<tr class="separator:a61e8c40b684c116cc47d163be51e9a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75f76376242a3c51acf48d2a46943ef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manager_8c.html#a75f76376242a3c51acf48d2a46943ef8">crearBuzonesPalillos</a> (struct mq_attr *mqAttr, mqd_t *buzon_palillos, char *buffer)</td></tr>
+<tr class="memdesc:a75f76376242a3c51acf48d2a46943ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función que crea los buzones de los palillos.  <a href="manager_8c.html#a75f76376242a3c51acf48d2a46943ef8">Más...</a><br /></td></tr>
+<tr class="separator:a75f76376242a3c51acf48d2a46943ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0993355d7943751ca9eea735835a9eaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manager_8c.html#a0993355d7943751ca9eea735835a9eaf">instalarManejadorSignal</a> ()</td></tr>
+<tr class="memdesc:a0993355d7943751ca9eea735835a9eaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función que instala el manejador de la señal de interrupción (Ctrl+C).  <a href="manager_8c.html#a0993355d7943751ca9eea735835a9eaf">Más...</a><br /></td></tr>
+<tr class="separator:a0993355d7943751ca9eea735835a9eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90ef4880bcabbb344c1a7191b6a75640"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manager_8c.html#a90ef4880bcabbb344c1a7191b6a75640">esperarProcesos</a> ()</td></tr>
+<tr class="memdesc:a90ef4880bcabbb344c1a7191b6a75640"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función que espera a que los procesos de los filósofos terminen.  <a href="manager_8c.html#a90ef4880bcabbb344c1a7191b6a75640">Más...</a><br /></td></tr>
+<tr class="separator:a90ef4880bcabbb344c1a7191b6a75640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="manager_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función principal del programa.  <a href="manager_8c.html#a0ddf1224851353fc92bfbff6f499fa97">Más...</a><br /></td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a078eb41250c1ccedc14b441e687bf0b7"><td class="memItemLeft" align="right" valign="top"><a id="a078eb41250c1ccedc14b441e687bf0b7" name="a078eb41250c1ccedc14b441e687bf0b7"></a>
+pid_t&#160;</td><td class="memItemRight" valign="bottom"><b>pids</b> [<a class="el" href="definitions_8h.html#a2d8bc467fd90c33cf566a85837049e8c">FILOSOFOS</a>]</td></tr>
+<tr class="memdesc:a078eb41250c1ccedc14b441e687bf0b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array de identificadores de procesos de los filósofos. <br /></td></tr>
+<tr class="separator:a078eb41250c1ccedc14b441e687bf0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e179dcf08689f967985432323fdf6f6"><td class="memItemLeft" align="right" valign="top"><a id="a8e179dcf08689f967985432323fdf6f6" name="a8e179dcf08689f967985432323fdf6f6"></a>
+mqd_t&#160;</td><td class="memItemRight" valign="bottom"><b>qHandlerMesa</b></td></tr>
+<tr class="memdesc:a8e179dcf08689f967985432323fdf6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identificador del buzón de la mesa. <br /></td></tr>
+<tr class="separator:a8e179dcf08689f967985432323fdf6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab43bcbe4172ab58a10a8092199ae14"><td class="memItemLeft" align="right" valign="top"><a id="afab43bcbe4172ab58a10a8092199ae14" name="afab43bcbe4172ab58a10a8092199ae14"></a>
+mqd_t&#160;</td><td class="memItemRight" valign="bottom"><b>qHandlerPalillos</b> [<a class="el" href="definitions_8h.html#a2d8bc467fd90c33cf566a85837049e8c">FILOSOFOS</a>]</td></tr>
+<tr class="memdesc:afab43bcbe4172ab58a10a8092199ae14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array de identificadores de los buzones de los palillos. <br /></td></tr>
+<tr class="separator:afab43bcbe4172ab58a10a8092199ae14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >Programa que lanza los procesos de los filósofos y gestiona la creación y eliminación de los buzones. </p>
+<p >Este programa crea un buzón para la mesa y un buzón para cada palillo. Luego lanza los procesos de los filósofos, que se encargan de pensar y comer. Al finalizar, libera los recursos y espera a que los procesos terminen.</p>
+<dl class="section author"><dt>Autor</dt><dd>Daniel Díaz García </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>2025-04-02 </dd></dl>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a0309e3ec9b4e1eb3d8883757657172bd" name="a0309e3ec9b4e1eb3d8883757657172bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0309e3ec9b4e1eb3d8883757657172bd">&#9670;&nbsp;</a></span>controlador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void controlador </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función que maneja la señal de interrupción (Ctrl+C). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">signal</td><td>Número de la señal recibida.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Esta función se encarga de liberar los recursos y finalizar los procesos al recibir la señal de interrupción.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">signal</td><td>Número de la señal recibida. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a75f76376242a3c51acf48d2a46943ef8" name="a75f76376242a3c51acf48d2a46943ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75f76376242a3c51acf48d2a46943ef8">&#9670;&nbsp;</a></span>crearBuzonesPalillos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crearBuzonesPalillos </td>
+          <td>(</td>
+          <td class="paramtype">struct mq_attr *&#160;</td>
+          <td class="paramname"><em>mqAttr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mqd_t *&#160;</td>
+          <td class="paramname"><em>buzon_palillos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función que crea los buzones de los palillos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mqAttr</td><td>Atributos del buzón. </td></tr>
+    <tr><td class="paramname">buzon_palillos</td><td>Array de identificadores de los buzones de los palillos. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Buffer para enviar mensajes.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Esta función crea un buzón para cada palillo y envía un mensaje a cada filósofo para que se registre en el buzón.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mqAttr</td><td>Atributos del buzón. </td></tr>
+    <tr><td class="paramname">buzon_palillos</td><td>Array de identificadores de los buzones de los palillos. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Buffer para enviar mensajes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a61e8c40b684c116cc47d163be51e9a68" name="a61e8c40b684c116cc47d163be51e9a68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61e8c40b684c116cc47d163be51e9a68">&#9670;&nbsp;</a></span>crearBuzonMesa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crearBuzonMesa </td>
+          <td>(</td>
+          <td class="paramtype">struct mq_attr *&#160;</td>
+          <td class="paramname"><em>mqAttr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mqd_t *&#160;</td>
+          <td class="paramname"><em>buzon_mesa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función que crea el buzón de la mesa y los buzones de los palillos. </p>
+<p >Función que crea el buzón de la mesa.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mqAttr</td><td>Atributos del buzón. </td></tr>
+    <tr><td class="paramname">buzon_mesa</td><td>Identificador del buzón de la mesa. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Buffer para enviar mensajes.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Esta función crea el buzón de la mesa y envía un mensaje a cada filósofo para que se registre en el buzón. Se envian solo FILOSOFOS-1 mensajes, para evitar interbloqueos.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mqAttr</td><td>Atributos del buzón. </td></tr>
+    <tr><td class="paramname">buzon_mesa</td><td>Identificador del buzón de la mesa. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Buffer para enviar mensajes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a90ef4880bcabbb344c1a7191b6a75640" name="a90ef4880bcabbb344c1a7191b6a75640"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90ef4880bcabbb344c1a7191b6a75640">&#9670;&nbsp;</a></span>esperarProcesos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esperarProcesos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función que espera a que los procesos de los filósofos terminen. </p>
+<p >Esta función espera a que cada proceso de filósofo termine y libera los recursos utilizados. </p>
+
+</div>
+</div>
+<a id="ae3a76f1f7e074df75622a7aafad75bcf" name="ae3a76f1f7e074df75622a7aafad75bcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a76f1f7e074df75622a7aafad75bcf">&#9670;&nbsp;</a></span>finalizarProcesos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void finalizarProcesos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función que finaliza los procesos de los filósofos. </p>
+<p >Esta función envía una señal de terminación a cada proceso de filósofo. </p>
+
+</div>
+</div>
+<a id="a0993355d7943751ca9eea735835a9eaf" name="a0993355d7943751ca9eea735835a9eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0993355d7943751ca9eea735835a9eaf">&#9670;&nbsp;</a></span>instalarManejadorSignal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void instalarManejadorSignal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función que instala el manejador de la señal de interrupción (Ctrl+C). </p>
+<p >Función que instala el manejador de la señal de interrupción.</p>
+<p >Esta función se encarga de gestionar la señal de interrupción (Ctrl+C). </p>
+
+</div>
+</div>
+<a id="ae4575587196d35e20f8cf5a375886afd" name="ae4575587196d35e20f8cf5a375886afd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4575587196d35e20f8cf5a375886afd">&#9670;&nbsp;</a></span>lanzarProcesos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lanzarProcesos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función que lanza los procesos de los filósofos. </p>
+<p >Esta función crea un proceso hijo para cada filósofo y ejecuta el programa del filósofo. </p>
+
+</div>
+</div>
+<a id="a043418698686058ede18ed16fd7a20fe" name="a043418698686058ede18ed16fd7a20fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a043418698686058ede18ed16fd7a20fe">&#9670;&nbsp;</a></span>liberarRecursos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void liberarRecursos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función que libera los recursos utilizados por el programa. </p>
+<p >Esta función cierra y elimina los buzones de la mesa y de los palillos. </p>
+
+</div>
+</div>
+<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función principal del programa. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>Número de argumentos. </td></tr>
+    <tr><td class="paramname">argv</td><td>Array de argumentos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>int Código de salida del programa. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

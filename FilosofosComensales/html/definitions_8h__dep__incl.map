@@ -1,0 +1,5 @@
+<map id="include/definitions.h" name="include/definitions.h">
+<area shape="rect" id="node1" title="Definiciones y constantes utilizadas en el programa de los filósofos comensales." alt="" coords="47,5,201,32"/>
+<area shape="rect" id="node2" href="$filosofo_8c.html" title="Programa que simula el comportamiento de un filósofo en el problema de los filósofos comensales." alt="" coords="5,80,109,107"/>
+<area shape="rect" id="node3" href="$manager_8c.html" title="Programa que lanza los procesos de los filósofos y gestiona la creación y eliminación de los buzones." alt="" coords="134,80,247,107"/>
+</map>

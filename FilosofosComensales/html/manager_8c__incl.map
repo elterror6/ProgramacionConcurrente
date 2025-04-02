@@ -1,0 +1,13 @@
+<map id="src/manager.c" name="src/manager.c">
+<area shape="rect" id="node1" title="Programa que lanza los procesos de los filósofos y gestiona la creación y eliminación de los buzones." alt="" coords="433,5,547,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,92,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="117,80,183,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="208,80,279,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="303,80,373,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="398,80,473,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="497,80,593,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="617,80,702,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="727,80,789,107"/>
+<area shape="rect" id="node10" href="$definitions_8h.html" title="Definiciones y constantes utilizadas en el programa de los filósofos comensales." alt="" coords="813,80,916,107"/>
+<area shape="rect" id="node11" title=" " alt="" coords="940,80,1013,107"/>
+</map>

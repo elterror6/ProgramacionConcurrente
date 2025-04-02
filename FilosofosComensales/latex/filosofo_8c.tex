@@ -1,0 +1,86 @@
+\hypertarget{filosofo_8c}{}\doxysection{Referencia del Archivo src/filosofo.c}
+\label{filosofo_8c}\index{src/filosofo.c@{src/filosofo.c}}
+
+
+Programa que simula el comportamiento de un filósofo en el problema de los filósofos comensales.  
+
+
+{\ttfamily \#include $<$mqueue.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$definitions.\+h$>$}\newline
+Dependencia gráfica adjunta para filosofo.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filosofo_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{filosofo_8c_ad6575b75468f104694b0f8377fcfad45}{filosofo}} (char $\ast$filosofo, char $\ast$buzon\+\_\+palillo\+\_\+izq, char $\ast$buzon\+\_\+palillo\+\_\+der)
+\begin{DoxyCompactList}\small\item\em Método que simula el comportamiento de un filósofo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{filosofo_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Método principal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Programa que simula el comportamiento de un filósofo en el problema de los filósofos comensales. 
+
+Este programa simula el comportamiento de un filósofo que alterna entre pensar y comer. Utiliza buzones para sincronizarse con los demás filósofos.
+
+\begin{DoxyAuthor}{Autor}
+Daniel Díaz García 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+2025-\/04-\/02 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{filosofo_8c_ad6575b75468f104694b0f8377fcfad45}\label{filosofo_8c_ad6575b75468f104694b0f8377fcfad45}} 
+\index{filosofo.c@{filosofo.c}!filosofo@{filosofo}}
+\index{filosofo@{filosofo}!filosofo.c@{filosofo.c}}
+\doxysubsubsection{\texorpdfstring{filosofo()}{filosofo()}}
+{\footnotesize\ttfamily void filosofo (\begin{DoxyParamCaption}\item[{char $\ast$}]{filosofo,  }\item[{char $\ast$}]{buzon\+\_\+palillo\+\_\+izq,  }\item[{char $\ast$}]{buzon\+\_\+palillo\+\_\+der }\end{DoxyParamCaption})}
+
+
+
+Método que simula el comportamiento de un filósofo. 
+
+Esta función se encarga de pensar y comer, utilizando los buzones de los palillos para sincronizarse con los demás filósofos.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em filosofo} & Número del filósofo. \\
+\hline
+{\em buzon\+\_\+palillo\+\_\+izq} & Nombre del buzón del palillo izquierdo. \\
+\hline
+{\em buzon\+\_\+palillo\+\_\+der} & Nombre del buzón del palillo derecho. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{filosofo_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{filosofo_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{filosofo.c@{filosofo.c}!main@{main}}
+\index{main@{main}!filosofo.c@{filosofo.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Método principal. 
+
+Este método recibe los argumentos de la línea de comandos y llama al método filosofo.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em argc} & Número de argumentos. \\
+\hline
+{\em argv} & Array de argumentos. \textquotesingle{}argv\mbox{[}1\mbox{]}\textquotesingle{}\+: Número del filósofo. \textquotesingle{}argv\mbox{[}2\mbox{]}\textquotesingle{}\+: Nombre del buzón del palillo izquierdo. \textquotesingle{}argv\mbox{[}3\mbox{]}\textquotesingle{}\+: Nombre del buzón del palillo derecho. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int Código de salida del programa. 
+\end{DoxyReturn}

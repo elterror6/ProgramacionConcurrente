@@ -1,0 +1,229 @@
+\hypertarget{manager_8c}{}\doxysection{Referencia del Archivo src/manager.c}
+\label{manager_8c}\index{src/manager.c@{src/manager.c}}
+
+
+Programa que lanza los procesos de los filósofos y gestiona la creación y eliminación de los buzones.  
+
+
+{\ttfamily \#include $<$mqueue.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$wait.\+h$>$}\newline
+{\ttfamily \#include $<$definitions.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+Dependencia gráfica adjunta para manager.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{manager_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{manager_8c_a0309e3ec9b4e1eb3d8883757657172bd}{controlador}} (int signal)
+\begin{DoxyCompactList}\small\item\em Función que maneja la señal de interrupción (Ctrl+C). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{manager_8c_a043418698686058ede18ed16fd7a20fe}{liberar\+Recursos}} ()
+\begin{DoxyCompactList}\small\item\em Función que libera los recursos utilizados por el programa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{manager_8c_ae3a76f1f7e074df75622a7aafad75bcf}{finalizar\+Procesos}} ()
+\begin{DoxyCompactList}\small\item\em Función que finaliza los procesos de los filósofos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{manager_8c_ae4575587196d35e20f8cf5a375886afd}{lanzar\+Procesos}} ()
+\begin{DoxyCompactList}\small\item\em Función que lanza los procesos de los filósofos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{manager_8c_a61e8c40b684c116cc47d163be51e9a68}{crear\+Buzon\+Mesa}} (struct mq\+\_\+attr $\ast$mq\+Attr, mqd\+\_\+t $\ast$buzon\+\_\+mesa, char $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em Función que crea el buzón de la mesa y los buzones de los palillos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{manager_8c_a75f76376242a3c51acf48d2a46943ef8}{crear\+Buzones\+Palillos}} (struct mq\+\_\+attr $\ast$mq\+Attr, mqd\+\_\+t $\ast$buzon\+\_\+palillos, char $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em Función que crea los buzones de los palillos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{manager_8c_a0993355d7943751ca9eea735835a9eaf}{instalar\+Manejador\+Signal}} ()
+\begin{DoxyCompactList}\small\item\em Función que instala el manejador de la señal de interrupción (Ctrl+C). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{manager_8c_a90ef4880bcabbb344c1a7191b6a75640}{esperar\+Procesos}} ()
+\begin{DoxyCompactList}\small\item\em Función que espera a que los procesos de los filósofos terminen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{manager_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Función principal del programa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{manager_8c_a078eb41250c1ccedc14b441e687bf0b7}\label{manager_8c_a078eb41250c1ccedc14b441e687bf0b7}} 
+pid\+\_\+t {\bfseries pids} \mbox{[}\mbox{\hyperlink{definitions_8h_a2d8bc467fd90c33cf566a85837049e8c}{FILOSOFOS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array de identificadores de procesos de los filósofos. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{manager_8c_a8e179dcf08689f967985432323fdf6f6}\label{manager_8c_a8e179dcf08689f967985432323fdf6f6}} 
+mqd\+\_\+t {\bfseries q\+Handler\+Mesa}
+\begin{DoxyCompactList}\small\item\em Identificador del buzón de la mesa. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{manager_8c_afab43bcbe4172ab58a10a8092199ae14}\label{manager_8c_afab43bcbe4172ab58a10a8092199ae14}} 
+mqd\+\_\+t {\bfseries q\+Handler\+Palillos} \mbox{[}\mbox{\hyperlink{definitions_8h_a2d8bc467fd90c33cf566a85837049e8c}{FILOSOFOS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array de identificadores de los buzones de los palillos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Programa que lanza los procesos de los filósofos y gestiona la creación y eliminación de los buzones. 
+
+Este programa crea un buzón para la mesa y un buzón para cada palillo. Luego lanza los procesos de los filósofos, que se encargan de pensar y comer. Al finalizar, libera los recursos y espera a que los procesos terminen.
+
+\begin{DoxyAuthor}{Autor}
+Daniel Díaz García 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+2025-\/04-\/02 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{manager_8c_a0309e3ec9b4e1eb3d8883757657172bd}\label{manager_8c_a0309e3ec9b4e1eb3d8883757657172bd}} 
+\index{manager.c@{manager.c}!controlador@{controlador}}
+\index{controlador@{controlador}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{controlador()}{controlador()}}
+{\footnotesize\ttfamily void controlador (\begin{DoxyParamCaption}\item[{int}]{signal }\end{DoxyParamCaption})}
+
+
+
+Función que maneja la señal de interrupción (Ctrl+C). 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em signal} & Número de la señal recibida.\\
+\hline
+\end{DoxyParams}
+Esta función se encarga de liberar los recursos y finalizar los procesos al recibir la señal de interrupción.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em signal} & Número de la señal recibida. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{manager_8c_a75f76376242a3c51acf48d2a46943ef8}\label{manager_8c_a75f76376242a3c51acf48d2a46943ef8}} 
+\index{manager.c@{manager.c}!crearBuzonesPalillos@{crearBuzonesPalillos}}
+\index{crearBuzonesPalillos@{crearBuzonesPalillos}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{crearBuzonesPalillos()}{crearBuzonesPalillos()}}
+{\footnotesize\ttfamily void crear\+Buzones\+Palillos (\begin{DoxyParamCaption}\item[{struct mq\+\_\+attr $\ast$}]{mq\+Attr,  }\item[{mqd\+\_\+t $\ast$}]{buzon\+\_\+palillos,  }\item[{char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Función que crea los buzones de los palillos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mq\+Attr} & Atributos del buzón. \\
+\hline
+{\em buzon\+\_\+palillos} & Array de identificadores de los buzones de los palillos. \\
+\hline
+{\em buffer} & Buffer para enviar mensajes.\\
+\hline
+\end{DoxyParams}
+Esta función crea un buzón para cada palillo y envía un mensaje a cada filósofo para que se registre en el buzón.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mq\+Attr} & Atributos del buzón. \\
+\hline
+{\em buzon\+\_\+palillos} & Array de identificadores de los buzones de los palillos. \\
+\hline
+{\em buffer} & Buffer para enviar mensajes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{manager_8c_a61e8c40b684c116cc47d163be51e9a68}\label{manager_8c_a61e8c40b684c116cc47d163be51e9a68}} 
+\index{manager.c@{manager.c}!crearBuzonMesa@{crearBuzonMesa}}
+\index{crearBuzonMesa@{crearBuzonMesa}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{crearBuzonMesa()}{crearBuzonMesa()}}
+{\footnotesize\ttfamily void crear\+Buzon\+Mesa (\begin{DoxyParamCaption}\item[{struct mq\+\_\+attr $\ast$}]{mq\+Attr,  }\item[{mqd\+\_\+t $\ast$}]{buzon\+\_\+mesa,  }\item[{char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Función que crea el buzón de la mesa y los buzones de los palillos. 
+
+Función que crea el buzón de la mesa.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mq\+Attr} & Atributos del buzón. \\
+\hline
+{\em buzon\+\_\+mesa} & Identificador del buzón de la mesa. \\
+\hline
+{\em buffer} & Buffer para enviar mensajes.\\
+\hline
+\end{DoxyParams}
+Esta función crea el buzón de la mesa y envía un mensaje a cada filósofo para que se registre en el buzón. Se envian solo FILOSOFOS-\/1 mensajes, para evitar interbloqueos.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em mq\+Attr} & Atributos del buzón. \\
+\hline
+{\em buzon\+\_\+mesa} & Identificador del buzón de la mesa. \\
+\hline
+{\em buffer} & Buffer para enviar mensajes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{manager_8c_a90ef4880bcabbb344c1a7191b6a75640}\label{manager_8c_a90ef4880bcabbb344c1a7191b6a75640}} 
+\index{manager.c@{manager.c}!esperarProcesos@{esperarProcesos}}
+\index{esperarProcesos@{esperarProcesos}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{esperarProcesos()}{esperarProcesos()}}
+{\footnotesize\ttfamily void esperar\+Procesos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función que espera a que los procesos de los filósofos terminen. 
+
+Esta función espera a que cada proceso de filósofo termine y libera los recursos utilizados. \mbox{\Hypertarget{manager_8c_ae3a76f1f7e074df75622a7aafad75bcf}\label{manager_8c_ae3a76f1f7e074df75622a7aafad75bcf}} 
+\index{manager.c@{manager.c}!finalizarProcesos@{finalizarProcesos}}
+\index{finalizarProcesos@{finalizarProcesos}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{finalizarProcesos()}{finalizarProcesos()}}
+{\footnotesize\ttfamily void finalizar\+Procesos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función que finaliza los procesos de los filósofos. 
+
+Esta función envía una señal de terminación a cada proceso de filósofo. \mbox{\Hypertarget{manager_8c_a0993355d7943751ca9eea735835a9eaf}\label{manager_8c_a0993355d7943751ca9eea735835a9eaf}} 
+\index{manager.c@{manager.c}!instalarManejadorSignal@{instalarManejadorSignal}}
+\index{instalarManejadorSignal@{instalarManejadorSignal}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{instalarManejadorSignal()}{instalarManejadorSignal()}}
+{\footnotesize\ttfamily void instalar\+Manejador\+Signal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función que instala el manejador de la señal de interrupción (Ctrl+C). 
+
+Función que instala el manejador de la señal de interrupción.
+
+Esta función se encarga de gestionar la señal de interrupción (Ctrl+C). \mbox{\Hypertarget{manager_8c_ae4575587196d35e20f8cf5a375886afd}\label{manager_8c_ae4575587196d35e20f8cf5a375886afd}} 
+\index{manager.c@{manager.c}!lanzarProcesos@{lanzarProcesos}}
+\index{lanzarProcesos@{lanzarProcesos}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{lanzarProcesos()}{lanzarProcesos()}}
+{\footnotesize\ttfamily void lanzar\+Procesos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función que lanza los procesos de los filósofos. 
+
+Esta función crea un proceso hijo para cada filósofo y ejecuta el programa del filósofo. \mbox{\Hypertarget{manager_8c_a043418698686058ede18ed16fd7a20fe}\label{manager_8c_a043418698686058ede18ed16fd7a20fe}} 
+\index{manager.c@{manager.c}!liberarRecursos@{liberarRecursos}}
+\index{liberarRecursos@{liberarRecursos}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{liberarRecursos()}{liberarRecursos()}}
+{\footnotesize\ttfamily void liberar\+Recursos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función que libera los recursos utilizados por el programa. 
+
+Esta función cierra y elimina los buzones de la mesa y de los palillos. \mbox{\Hypertarget{manager_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{manager_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{manager.c@{manager.c}!main@{main}}
+\index{main@{main}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Función principal del programa. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em argc} & Número de argumentos. \\
+\hline
+{\em argv} & Array de argumentos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+int Código de salida del programa. 
+\end{DoxyReturn}
