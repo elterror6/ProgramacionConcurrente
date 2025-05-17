@@ -1,4 +1,4 @@
-<img src="https://github.com/elterror6/ProgramacionConcurrente/blob/main/images/LogoUCLM.jpg" alt="UCLM Logo">
+<img src="https://github.com/elterror6/ProgramacionConcurrente/blob/main/images/LogoUCLM.jpg" alt="UCLM Logo" witdh=25 height=100>
 <h1>Prácticas teóricas Programación Concurrente y a Tiempo Real</h1>
 <p>Repositorio donde se van a subir códigos de la teoría de la asignatura <b>Programación Concurrente y a Tiempo Real</b> cursada en el año académico 2024/2025 en la Facultad de Ciencias y Tecnologías de la Información de la Universidad de Castilla La-Mancha en Talavera de la Reina.</p>
 <h2>Práctica 1 - Puente de un solo carril</h2>
