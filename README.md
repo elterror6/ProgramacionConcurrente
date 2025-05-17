@@ -4,7 +4,7 @@
 <p>Esta práctica consiste en aplicar el puente de un solo carril. El problema consiste en que varios coches que vienen por los dos lados de un puente quieren cruzarlo, pero solo puede hacerlo un coche al mismo tiempo, entonces se tienen que utilizar semáforos para poder sincronizar los procesos coche que vienen por el norte y los que vienen por el sur.</p>
 <img src="" alt="Imagen representativa del funcionamiento del puente de un solo carril.">
 <h2>Práctica 2 - Barbero Dormilón</h2>
-<p><Esta práctica consiste en aplicar el patrón de sincronización del barbero dormilón. El problema consiste en un barbero que duerme y corta el pelo, el barbero tiene que cortar el pelo a los clientes que van entrando a la barbería. Si la barbería esta llena el cliente se va./p>
+<p>Esta práctica consiste en aplicar el patrón de sincronización del barbero dormilón. El problema consiste en un barbero que duerme y corta el pelo, el barbero tiene que cortar el pelo a los clientes que van entrando a la barbería. Si la barbería esta llena el cliente se va.</p>
 <img src="" alt="Imagen representativa del funcionamiento del barbero dormilón.">
 <h2>Trabajo teórico - Monitores</h2>
 <p>Este trabajo consiste en aplicar el patrón de sincronización del barbero dormilón. El problema consiste en un barbero que duerme y corta el pelo, el barbero tiene que cortar el pelo a los clientes que van entrando a la barbería. Si la barbería esta llena, el cliente se va a dar una vuelta y vuelve.</p>
