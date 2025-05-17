@@ -1,0 +1,65 @@
+\hypertarget{barbero_8c}{}\doxysection{Referencia del Archivo src/barbero.c}
+\label{barbero_8c}\index{src/barbero.c@{src/barbero.c}}
+
+
+Implementacion de un proceso barbero.  
+
+
+{\ttfamily \#include $<$semaforo\+I.\+h$>$}\newline
+{\ttfamily \#include $<$memoria\+I.\+h$>$}\newline
+{\ttfamily \#include $<$definitions.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Dependencia gráfica adjunta para barbero.\+c\+:
+% FIG 0
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{barbero_8c_a08d59f67bd9ca3b793c224bdff8560e1}{cortar}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que simula el corte de pelo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{barbero_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcion principal del proceso barbero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Implementacion de un proceso barbero. 
+
+\begin{DoxyAuthor}{Autor}
+Daniel Diaz Garcia 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+2025-\/03-\/22 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{barbero_8c_a08d59f67bd9ca3b793c224bdff8560e1}\label{barbero_8c_a08d59f67bd9ca3b793c224bdff8560e1}} 
+\index{barbero.c@{barbero.c}!cortar@{cortar}}
+\index{cortar@{cortar}!barbero.c@{barbero.c}}
+\doxysubsubsection{\texorpdfstring{cortar()}{cortar()}}
+{\footnotesize\ttfamily void cortar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funcion que simula el corte de pelo. 
+
+La funcion simula el corte de pelo, el barbero tarda un tiempo aleatorio en cortar el pelo. \mbox{\Hypertarget{barbero_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{barbero_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{barbero.c@{barbero.c}!main@{main}}
+\index{main@{main}!barbero.c@{barbero.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Funcion principal del proceso barbero. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em argc} & Cantidad de argumentos. \\
+\hline
+{\em argv} & Argumentos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+EXIT\+\_\+\+SUCCESS si todo salio bien. 
+\end{DoxyReturn}

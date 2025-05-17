@@ -1,0 +1,26 @@
+\hypertarget{memoriaI_8h_source}{}\doxysection{memoria\+I.\+h}
+\label{memoriaI_8h_source}\index{include/memoriaI.h@{include/memoriaI.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_VARIABLEI\_H\_\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_VARIABLEI\_H\_\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{// Crea un objeto de memoria compartida y devuelve el descriptor de archivo.}}
+\DoxyCodeLine{5 \textcolor{keywordtype}{int} crear\_var (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keywordtype}{int} valor);}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{comment}{// Obtiene el descriptor asociado a la variable.}}
+\DoxyCodeLine{8 \textcolor{keywordtype}{int} obtener\_var (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name);}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{comment}{// Destruye el objeto de memoria compartida.}}
+\DoxyCodeLine{11 \textcolor{keywordtype}{void} destruir\_var (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name);}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{comment}{// Modifica el valor del objeto de memoria compartida.}}
+\DoxyCodeLine{14 \textcolor{keywordtype}{void} modificar\_var (\textcolor{keywordtype}{int} shm\_fd, \textcolor{keywordtype}{int} valor);}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{comment}{// Devuelve el valor del objeto de memoria compartida.}}
+\DoxyCodeLine{17 \textcolor{keywordtype}{void} consultar\_var (\textcolor{keywordtype}{int} shm\_fd, \textcolor{keywordtype}{int} *valor);}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{20 }
+
+\end{DoxyCode}

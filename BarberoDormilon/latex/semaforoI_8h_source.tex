@@ -1,0 +1,27 @@
+\hypertarget{semaforoI_8h_source}{}\doxysection{semaforo\+I.\+h}
+\label{semaforoI_8h_source}\index{include/semaforoI.h@{include/semaforoI.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_SEMAFOROI\_H\_\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_SEMAFOROI\_H\_\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <semaphore.h>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{// Crea un semáforo POSIX.}}
+\DoxyCodeLine{7 sem\_t *crear\_sem (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} valor);}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{comment}{// Obtiene un semáforo POSIX (ya existente).}}
+\DoxyCodeLine{10 sem\_t *get\_sem (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name);}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{comment}{// Cierra un semáforo POSIX.}}
+\DoxyCodeLine{13 \textcolor{keywordtype}{void} destruir\_sem (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{comment}{// Incrementa el semáforo.}}
+\DoxyCodeLine{16 \textcolor{keywordtype}{void} signal\_sem (sem\_t *sem);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{comment}{// Decrementa el semáforo.}}
+\DoxyCodeLine{19 \textcolor{keywordtype}{void} wait\_sem (sem\_t *sem);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

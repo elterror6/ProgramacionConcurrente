@@ -1,0 +1,204 @@
+\hypertarget{manager_8c}{}\doxysection{Referencia del Archivo src/manager.c}
+\label{manager_8c}\index{src/manager.c@{src/manager.c}}
+
+
+Implementacion de un proceso manager.  
+
+
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$linux/limits.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$semaforo\+I.\+h$>$}\newline
+{\ttfamily \#include $<$memoria\+I.\+h$>$}\newline
+{\ttfamily \#include $<$definitions.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Dependencia gráfica adjunta para manager.\+c\+:
+% FIG 0
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{manager_8c_a7214d21089bfc0a72b1a76ce5e1b1877}{instalar\+\_\+manejador\+\_\+senhal}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que instala un manejador de señal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{manager_8c_afc73dd0e7b453ac98a7717392e8889fa}{manejador\+\_\+senhal}} (int senhal)
+\begin{DoxyCompactList}\small\item\em Funcion manejadora de señales. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{manager_8c_a285d9877a3817a7ce1fda2d0a15928c5}{iniciar\+\_\+tabla\+\_\+procesos}} (int n\+\_\+processes\+\_\+client)
+\begin{DoxyCompactList}\small\item\em Funcion que inicia la tabla de procesos hijos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{manager_8c_a1a16a99b37c1b28a03395ae47b6e48c1}{crear\+\_\+procesos}} (int num\+Clients)
+\begin{DoxyCompactList}\small\item\em Funcion que crea los procesos hijos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{manager_8c_ac7418343a6bfd4f6d36d6b81686034bf}{lanzar\+\_\+proceso\+\_\+cliente}} (const int table\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Funcion que lanza un proceso cliente. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{manager_8c_a4e2087eb74fb8c9c69fb29a258e06a92}\label{manager_8c_a4e2087eb74fb8c9c69fb29a258e06a92}} 
+void {\bfseries lanzar\+\_\+proceso\+\_\+barbero} ()
+\begin{DoxyCompactList}\small\item\em Funcion que lanza un proceso barbero. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{manager_8c_adc67c0f272034a002a49cb161ee24265}{terminar\+\_\+procesos}} (void)
+\begin{DoxyCompactList}\small\item\em Funcion que termina los procesos hijos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{manager_8c_a3ec1cbb75df602ff01af81675f334690}{liberar\+\_\+recursos}} ()
+\begin{DoxyCompactList}\small\item\em Funcion que libera los recursos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{manager_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funcion principal del proceso manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{manager_8c_a5c3e0f78a05d80a36d01865a5f93cd7e}{lanzar\+\_\+proceso\+\_\+barbero}} (int index\+\_\+table)
+\begin{DoxyCompactList}\small\item\em Funcion que lanza un proceso barbero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{manager_8c_a6d49920788b34f85d76bcafff4cde8b0}\label{manager_8c_a6d49920788b34f85d76bcafff4cde8b0}} 
+struct \mbox{\hyperlink{structTProcess__t}{TProcess\+\_\+t}} $\ast$ {\bfseries g\+\_\+process\+\_\+table\+\_\+clients}
+\begin{DoxyCompactList}\small\item\em Tabla de procesos clientes y barbero. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{manager_8c_a5441de8f86c6211df72d53987ea9e8a6}\label{manager_8c_a5441de8f86c6211df72d53987ea9e8a6}} 
+struct \mbox{\hyperlink{structTProcess__t}{TProcess\+\_\+t}} $\ast$ {\bfseries g\+\_\+process\+\_\+table\+\_\+barber}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Implementacion de un proceso manager. 
+
+\begin{DoxyAuthor}{Autor}
+Daniel Diaz Garcia 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+2025-\/03-\/22 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{manager_8c_a1a16a99b37c1b28a03395ae47b6e48c1}\label{manager_8c_a1a16a99b37c1b28a03395ae47b6e48c1}} 
+\index{manager.c@{manager.c}!crear\_procesos@{crear\_procesos}}
+\index{crear\_procesos@{crear\_procesos}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{crear\_procesos()}{crear\_procesos()}}
+{\footnotesize\ttfamily void crear\+\_\+procesos (\begin{DoxyParamCaption}\item[{int}]{num\+Clients }\end{DoxyParamCaption})}
+
+
+
+Funcion que crea los procesos hijos. 
+
+La funcion crea los procesos hijos, primero se crea el proceso barbero y despues se crean los procesos clientes.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em num\+Clients} & Numero de procesos clientes a crear. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{manager_8c_a285d9877a3817a7ce1fda2d0a15928c5}\label{manager_8c_a285d9877a3817a7ce1fda2d0a15928c5}} 
+\index{manager.c@{manager.c}!iniciar\_tabla\_procesos@{iniciar\_tabla\_procesos}}
+\index{iniciar\_tabla\_procesos@{iniciar\_tabla\_procesos}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{iniciar\_tabla\_procesos()}{iniciar\_tabla\_procesos()}}
+{\footnotesize\ttfamily void iniciar\+\_\+tabla\+\_\+procesos (\begin{DoxyParamCaption}\item[{int}]{n\+\_\+processes\+\_\+client }\end{DoxyParamCaption})}
+
+
+
+Funcion que inicia la tabla de procesos hijos. 
+
+La funcion inicia la tabla de procesos hijos con el numero de procesos clientes que se van a crear.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em n\+\_\+processes\+\_\+client} & Numero de procesos clientes a crear. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{manager_8c_a7214d21089bfc0a72b1a76ce5e1b1877}\label{manager_8c_a7214d21089bfc0a72b1a76ce5e1b1877}} 
+\index{manager.c@{manager.c}!instalar\_manejador\_senhal@{instalar\_manejador\_senhal}}
+\index{instalar\_manejador\_senhal@{instalar\_manejador\_senhal}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{instalar\_manejador\_senhal()}{instalar\_manejador\_senhal()}}
+{\footnotesize\ttfamily void instalar\+\_\+manejador\+\_\+senhal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funcion que instala un manejador de señal. 
+
+La funcion instala un manejador de señal para el proceso manager. \mbox{\Hypertarget{manager_8c_a5c3e0f78a05d80a36d01865a5f93cd7e}\label{manager_8c_a5c3e0f78a05d80a36d01865a5f93cd7e}} 
+\index{manager.c@{manager.c}!lanzar\_proceso\_barbero@{lanzar\_proceso\_barbero}}
+\index{lanzar\_proceso\_barbero@{lanzar\_proceso\_barbero}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{lanzar\_proceso\_barbero()}{lanzar\_proceso\_barbero()}}
+{\footnotesize\ttfamily void lanzar\+\_\+proceso\+\_\+barbero (\begin{DoxyParamCaption}\item[{int}]{index\+\_\+table }\end{DoxyParamCaption})}
+
+
+
+Funcion que lanza un proceso barbero. 
+
+La funcion lanza un proceso barbero y lo guarda en la tabla de procesos.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index\+\_\+table} & Indice de la tabla de procesos. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{manager_8c_ac7418343a6bfd4f6d36d6b81686034bf}\label{manager_8c_ac7418343a6bfd4f6d36d6b81686034bf}} 
+\index{manager.c@{manager.c}!lanzar\_proceso\_cliente@{lanzar\_proceso\_cliente}}
+\index{lanzar\_proceso\_cliente@{lanzar\_proceso\_cliente}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{lanzar\_proceso\_cliente()}{lanzar\_proceso\_cliente()}}
+{\footnotesize\ttfamily void lanzar\+\_\+proceso\+\_\+cliente (\begin{DoxyParamCaption}\item[{int}]{index\+\_\+table }\end{DoxyParamCaption})}
+
+
+
+Funcion que lanza un proceso cliente. 
+
+La funcion lanza un proceso cliente y lo guarda en la tabla de procesos.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em index\+\_\+table} & Indice de la tabla de procesos. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{manager_8c_a3ec1cbb75df602ff01af81675f334690}\label{manager_8c_a3ec1cbb75df602ff01af81675f334690}} 
+\index{manager.c@{manager.c}!liberar\_recursos@{liberar\_recursos}}
+\index{liberar\_recursos@{liberar\_recursos}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{liberar\_recursos()}{liberar\_recursos()}}
+{\footnotesize\ttfamily void liberar\+\_\+recursos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funcion que libera los recursos. 
+
+La funcion libera los recursos utilizados por el programa. \mbox{\Hypertarget{manager_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{manager_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{manager.c@{manager.c}!main@{main}}
+\index{main@{main}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Funcion principal del proceso manager. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em argc} & Cantidad de argumentos. \\
+\hline
+{\em argv} & Argumentos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+EXIT\+\_\+\+SUCCESS si todo salio bien. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{manager_8c_afc73dd0e7b453ac98a7717392e8889fa}\label{manager_8c_afc73dd0e7b453ac98a7717392e8889fa}} 
+\index{manager.c@{manager.c}!manejador\_senhal@{manejador\_senhal}}
+\index{manejador\_senhal@{manejador\_senhal}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{manejador\_senhal()}{manejador\_senhal()}}
+{\footnotesize\ttfamily void manejador\+\_\+senhal (\begin{DoxyParamCaption}\item[{int}]{sign }\end{DoxyParamCaption})}
+
+
+
+Funcion manejadora de señales. 
+
+La funcion maneja la señal SIGINT (Ctrl+C) y termina el programa.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em sign} & Señal a manejar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{manager_8c_adc67c0f272034a002a49cb161ee24265}\label{manager_8c_adc67c0f272034a002a49cb161ee24265}} 
+\index{manager.c@{manager.c}!terminar\_procesos@{terminar\_procesos}}
+\index{terminar\_procesos@{terminar\_procesos}!manager.c@{manager.c}}
+\doxysubsubsection{\texorpdfstring{terminar\_procesos()}{terminar\_procesos()}}
+{\footnotesize\ttfamily void terminar\+\_\+procesos (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Funcion que termina los procesos hijos. 
+
+La funcion termina los procesos hijos que se encuentran en la tabla de procesos. 
