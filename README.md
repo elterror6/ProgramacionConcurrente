@@ -6,7 +6,7 @@
 <img src="https://github.com/elterror6/ProgramacionConcurrente/blob/main/images/P1C.png" alt="Imagen representativa del funcionamiento del puente de un solo carril.">
 <h2>Práctica 2 - Barbero Dormilón</h2>
 <p>Esta práctica consiste en aplicar el patrón de sincronización del barbero dormilón. El problema consiste en un barbero que duerme y corta el pelo, el barbero tiene que cortar el pelo a los clientes que van entrando a la barbería. Si la barbería esta llena el cliente se va.</p>
-<img src="" alt="Imagen representativa del funcionamiento del barbero dormilón.">
+<img src="https://github.com/elterror6/ProgramacionConcurrente/blob/main/images/BD.png" alt="Imagen representativa del funcionamiento del barbero dormilón.">
 <h2>Trabajo teórico - Monitores</h2>
 <p>Este trabajo consiste en aplicar el patrón de sincronización del barbero dormilón. El problema consiste en un barbero que duerme y corta el pelo, el barbero tiene que cortar el pelo a los clientes que van entrando a la barbería. Si la barbería esta llena, el cliente se va a dar una vuelta y vuelve.</p>
 <img src="https://github.com/elterror6/ProgramacionConcurrente/blob/main/images/ejT.png" alt="Imagen descriptiva del funcionamiento de los monitores del problema del barbero dormilón.">
